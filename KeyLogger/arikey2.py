@@ -25,7 +25,7 @@ logs_by_minute = {}
 def write_to_file_every_minute():
     threading.Timer(60.0, write_to_file_every_minute).start()
 
-    now = datetime.now().strftime("%H:%M")
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
     if now in logs_by_minute and logs_by_minute[now]:
         log_entry = f"\n=== {now} ===\n{logs_by_minute[now]}"
         encrypted_log = fernet.encrypt(log_entry.encode())
