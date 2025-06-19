@@ -79,7 +79,7 @@ def log_by_minute():
             if stop_logging:
                 return
             time.sleep(check_interval)
-l
+
 
 
 
