@@ -79,12 +79,7 @@ def log_by_minute():
             if stop_logging:
                 return
             time.sleep(check_interval)
-log_thread = threading.Thread(target=log_by_minute)
-log_thread.start()
-
-
-with Listener(on_press=on_press) as listener:
-    listener.join()
+l
 
 
 
