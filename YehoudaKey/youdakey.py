@@ -23,6 +23,16 @@ def on_press(key):
 
     try:
         char = key.char
+        if isinstance(key, KeyCode):
+            # מקשים של המספרים למעלה (vk 48 à 57)
+            # if 48 <= key.vk <= 57:
+            # char = chr(key.vk)  # '0' à '9'
+
+            # מקשים של המספרים  בצד (vk 96 à 105)
+            if 96 <= key.vk <= 105:
+                char = str(key.vk - 96)  # '0' à '9'
+            
+
     except AttributeError:
 
 
